@@ -1,6 +1,5 @@
-package com.mdc.android.poc.tasks
+package com.mdc.android.poc.search
 
-import android.os.Build
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -14,7 +13,8 @@ import androidx.compose.ui.Modifier
 import com.mdc.android.poc.core.BuildConfig as CoreConfig
 
 @Composable
-fun TasksScreen() {
+fun SearchScreen() {
+
   ProvideTextStyle(MaterialTheme.typography.titleLarge) {
     Column(
       modifier = Modifier.fillMaxSize(),
@@ -22,7 +22,7 @@ fun TasksScreen() {
       horizontalAlignment = Alignment.CenterHorizontally
     ) {
       Text(
-        text = "Tasks version : ${BuildConfig.VERSION_NAME}",
+        text = "Search version : ${BuildConfig.VERSION_NAME}",
       )
 
       Text(
@@ -30,5 +30,4 @@ fun TasksScreen() {
       )
     }
   }
-
 }

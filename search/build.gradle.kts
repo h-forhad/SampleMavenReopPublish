@@ -1,18 +1,24 @@
 plugins {
-  alias(libs.plugins.android.application)
+  id("com.android.library")
   alias(libs.plugins.kotlin.android)
+  alias(libs.plugins.kotlin.compose)
 }
 
 android {
   namespace = "com.mdc.android.poc.search"
-  compileSdk = 34
+  compileSdk = 35
 
   defaultConfig {
-    applicationId = "com.mdc.android.poc.search"
-    minSdk = 32
-    targetSdk = 34
-    versionCode = 1
-    versionName = "1.0"
+    minSdk = 34
+    targetSdk = 35
+
+    val tasksVersionMajor = 0
+    val tasksVersionMinor = 0
+    val tasksVersionPatch = 1
+
+    version = "${tasksVersionMajor}.${tasksVersionMinor}.${tasksVersionPatch}"
+
+    buildConfigField( type = "String", name="VERSION_NAME", value ="\"${version}\"")
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
   }
@@ -24,22 +30,31 @@ android {
     }
   }
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
   }
   kotlinOptions {
-    jvmTarget = "11"
+    jvmTarget = "21"
+  }
+  buildFeatures {
+    compose = true
   }
 }
 
+android.buildFeatures.buildConfig = true
+
 dependencies {
+  implementation(project( ":core"))
 
   implementation(libs.androidx.core.ktx)
   implementation(libs.androidx.appcompat)
   implementation(libs.material)
   implementation(libs.androidx.runtime.android)
 
-  testImplementation(libs.junit)
-  androidTestImplementation(libs.androidx.junit)
-  androidTestImplementation(libs.androidx.espresso.core)
+  implementation(platform(libs.androidx.compose.bom))
+  implementation(libs.androidx.ui)
+  implementation(libs.androidx.foundation)
+  implementation(libs.androidx.ui.graphics)
+  implementation(libs.androidx.ui.tooling.preview)
+  implementation(libs.androidx.material3)
 }

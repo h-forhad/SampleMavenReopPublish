@@ -6,12 +6,11 @@ plugins {
 
 android {
   namespace = "com.mdc.android.poc.artifact"
-  compileSdk = 34
+  compileSdk = 35
 
   defaultConfig {
-    applicationId = "com.mdc.android.poc.artifact"
-    minSdk = 32
-    targetSdk = 34
+    minSdk = 34
+    targetSdk = 35
     versionCode = 1
     versionName = "1.0"
 
@@ -25,11 +24,11 @@ android {
     }
   }
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
   }
   kotlinOptions {
-    jvmTarget = "11"
+    jvmTarget = "21"
   }
   buildFeatures {
     compose = true
@@ -37,6 +36,10 @@ android {
 }
 
 dependencies {
+
+  implementation(project(":core"))
+  implementation(project(":tasks"))
+  implementation(project(":search"))
 
   implementation(libs.androidx.core.ktx)
   implementation(libs.androidx.lifecycle.runtime.ktx)

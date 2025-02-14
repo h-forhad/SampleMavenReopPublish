@@ -2,6 +2,8 @@
 
 This project is a multi-module Maven project that publishes artifacts to a local storage.
 
+![img.png](img.png)
+
 # **Modules**
 
 The project consists of the following modules:

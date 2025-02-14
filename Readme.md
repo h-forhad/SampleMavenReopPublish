@@ -2,7 +2,10 @@
 
 This project is a multi-module Maven project that publishes artifacts to a local storage.
 
-![img.png](img.png)
+<div style="display: flex; justify-content: space-between">
+    <img src="img.png" width="49%"/>
+    <img src="img.png" width="49%"/>
+</div>
 
 # **Modules**
 

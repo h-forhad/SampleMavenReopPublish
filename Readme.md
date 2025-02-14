@@ -21,7 +21,16 @@ search: mvn deploy publishes the search.aar file to ../local-repo/search.aar
 # **Note:**
 
 For now, we are publishing the AAR files to a local storage outside of this project directory, so
-that another consumer app can consume these libraries.
+that another consumer app can consume these libraries. 
+
+To upload artifacts to a remote storage, you can use the following code in respective build.gradle files:
+
+    repositories {
+         maven {
+              url = uri("remote url")
+         }
+    }
+
 
 # **Usage:**
 `

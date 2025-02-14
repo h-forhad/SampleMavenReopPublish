@@ -29,14 +29,20 @@ For now, we are publishing the AAR files to a local storage outside of this proj
 that another consumer app can consume these libraries.
 
 # **Usage:**
-`
-repositories {
-    maven {
-        url = uri("${rootProject.buildDir}/local-repo")
-    }
-}
 
-dependencies {
-    implementation("com.local.pscore:core-module:1.0.0")
-}
-`
+
+
+    repositories {
+        maven {
+            url = uri("${rootProject.buildDir}/local-repo")
+        }
+    }
+
+
+    dependencies {
+        implementation("com.local.pscore:core:1.0.0")
+        
+        implementation("com.local.pscore:search:1.0.0")
+        
+        implementation("com.local.pscore:tasks:1.0.0")
+    }

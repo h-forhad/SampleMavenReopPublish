@@ -15,7 +15,7 @@ android {
 
     val tasksVersionMajor = 0
     val tasksVersionMinor = 0
-    val tasksVersionPatch = 1
+    val tasksVersionPatch = 2
 
     version = "${tasksVersionMajor}.${tasksVersionMinor}.${tasksVersionPatch}"
 

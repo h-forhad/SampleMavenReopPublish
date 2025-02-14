@@ -55,7 +55,7 @@ publishing {
   }
   repositories {
     maven {
-      url = uri("${rootProject.buildDir}/local-repo")
+      url = uri("/Volumes/Motorola Projects/MDC/POC/LocalArtifacts/local-repo")
     }
   }
 }

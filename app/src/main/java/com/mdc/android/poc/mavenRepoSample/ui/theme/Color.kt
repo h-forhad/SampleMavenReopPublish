@@ -1,4 +1,4 @@
-package com.mdc.android.poc.artifact.ui.theme
+package com.mdc.android.poc.mavenRepoSample.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

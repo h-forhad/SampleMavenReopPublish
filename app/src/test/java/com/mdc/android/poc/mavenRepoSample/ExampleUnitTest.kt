@@ -1,4 +1,4 @@
-package com.mdc.android.poc.tasks
+package com.mdc.android.poc.mavenRepoSample
 
 import org.junit.Test
 

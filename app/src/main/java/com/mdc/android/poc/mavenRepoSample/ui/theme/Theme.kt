@@ -1,6 +1,5 @@
-package com.mdc.android.poc.artifact.ui.theme
+package com.mdc.android.poc.mavenRepoSample.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

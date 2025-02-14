@@ -19,7 +19,7 @@ dependencyResolutionManagement {
   }
 }
 
-rootProject.name = "Android artifact jfrog"
+rootProject.name = "SampleApp for maven artifact"
 include(":app")
 include(":core")
 include(":tasks")

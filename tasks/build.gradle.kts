@@ -1,5 +1,6 @@
 plugins {
   id("com.android.library")
+  id("maven-publish")
   alias(libs.plugins.kotlin.android)
   alias(libs.plugins.kotlin.compose)
 }
@@ -38,6 +39,24 @@ android {
   }
   kotlinOptions {
     jvmTarget = "21"
+  }
+}
+
+publishing {
+  publications {
+    create<MavenPublication>("aarPublication") {
+      groupId = "com.local.pscore"
+      artifactId = "tasks"
+      version = android.defaultConfig.versionName
+      afterEvaluate {
+        from(components["release"])
+      }
+    }
+  }
+  repositories {
+    maven {
+      url = uri("${rootProject.buildDir}/local-repo")
+    }
   }
 }
 

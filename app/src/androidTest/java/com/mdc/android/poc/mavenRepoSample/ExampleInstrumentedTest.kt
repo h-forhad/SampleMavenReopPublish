@@ -1,4 +1,4 @@
-package com.mdc.android.poc.artifact
+package com.mdc.android.poc.mavenRepoSample
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

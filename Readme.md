@@ -60,3 +60,8 @@ To upload artifacts to a remote storage, you can use the following code in respe
         
         implementation("com.local.pscore:tasks:1.0.0")
     }
+
+
+# **Sample AAR Consumer Project**
+
+See the sample project [SampleArtifactConsumer](https://github.com/h-forhad/SampleArtifactConsumer) for an example of how to use the published AAR files.
